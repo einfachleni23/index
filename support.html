@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Leni - Support</title>
+</head>
+
+<body>
+    <header>
+        <h1>Willkommen im Support!</h1>
+    </header>
+
+       <nav>
+        <!-- Hier könnten Navigationslinks stehen -->
+		<a class="button" href="index.html">Home</a>
+        <button class="button" id="loginButton">Anmelden</button>
+        <div id="loginHint" class="hidden">
+            <p>Hinweis: Nur für unseren ADMIN!</p>
+        </div>
+        
+        <button class="button" id="aboutButton">Über uns</button>
+        <div id="aboutHint" class="hidden">
+            <p>Willkommen auf unserer Website! Wir sind ein tolles Team! Schau: <a href="ueberuns.html">weitere Informationen</a></p>
+        </div>
+
+        <button class="button" id="contactButton">Kontakt</button>
+        <div id="contactHint" class="hidden">
+            <p>Wir freuen uns über deine Kontaktaufnahme! Schaue:  <a href="support.html">weitere Informatioenen</a></p>
+        </div>
+    </nav>
+
+    <section id="forum">
+        <!-- Hier das WidgetBot-Widget einfügen -->
+        <widgetbot
+            server="1212668207673114624"
+            channel="1212668208142622722"
+            width="800"
+            height="600"
+        ></widgetbot>
+        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+    </section>
+
+    <aside>
+        <!-- Hier könnten zusätzliche Informationen oder Widgets stehen -->
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 einfachleni23 / einfach.leni</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
