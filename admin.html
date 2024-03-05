@@ -63,7 +63,8 @@
 
         // JavaScript-Code zum Füllen der Liste mit zufälligen IP-Adressen und Uhrzeiten
         var ipList = document.getElementById('ipList');
-        for (var i = 0; i < 5; i++) {
+        var numberOfAddresses = Math.floor(Math.random() * 10) + 1; // Zufällige Anzahl von 1 bis 10
+        for (var i = 0; i < numberOfAddresses; i++) {
             var li = document.createElement('li');
             var pastDate = new Date();
             pastDate.setDate(pastDate.getDate() - Math.floor(Math.random() * 30)); // Zufälliges Datum in der Vergangenheit
