@@ -6,6 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Leni - Support</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header, nav, main, aside, footer {
+            width: 100%;
+            max-width: 800px; /* Ändere die Breite nach Bedarf */
+        }
+
+        header, nav, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .h2-1 {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .btn-contact {
+            background-color: #48de7a;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-contact:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +102,6 @@
     </header>
 
     <nav>
-        <!-- Hier könnten Navigationslinks stehen -->
         <a class="button" href="index.html">Home</a>
         <button class="button" id="loginButton">Anmelden</button>
         <div id="loginHint" class="hidden">
@@ -39,67 +126,17 @@
 
                 <input type="text" class="inputs" name="first" placeholder="Vorname">
                 <br>
-                <br>
                 <input type="text" class="inputs" name="last" placeholder="Nachname">
                 <br>
-                <br>
                 <input type="email" class="inputs" name="email" placeholder="Email Adresse">
-                <br>
                 <br>
                 <textarea required autocomplete="off" name="message" id="" cols="60" rows="5" placeholder="Hier Nachricht eingeben"></textarea>
 
                 <br>
-                <br>
-                <br>
-
                 <button class="btn-contact">Senden / Send</button>
             </div>
         </form>
     </main>
-
-    <style>
-        .inputs, textarea {
-            margin-bottom: 20px; /* Platz zwischen den Eingabefeldern erhöhen */
-        }
-
-        .img-center {
-            text-align: center;
-        }
-
-        .btn-contact {
-            background-color: #48de7a;
-            width: 200px;
-            height: 35px;
-            border-radius: 16px;
-            cursor: pointer;
-            border: none;
-            color: white;
-            transition: opacity 0.3s ease; /* Hinzugefügte Übergangseffekte */
-        }
-
-        .btn-contact:hover {
-            opacity: 0.9;
-        }
-
-        .inputs, textarea {
-            background-color: white;
-            border-radius: 20px;
-            width: 300px; /* Breite der Eingabefelder erhöhen */
-            height: 40px; /* Höhe der Eingabefelder erhöhen */
-            text-align: center;
-            border: 2px solid black;
-            padding: 5px; /* Innenabstand der Eingabefelder hinzufügen */
-            box-sizing: border-box; /* Box-Modell anpassen */
-            font-size: 16px; /* Schriftgröße erhöhen */
-            margin-top: 10px; /* Abstand zum vorherigen Element erhöhen */
-        }
-
-        .inputs::placeholder, textarea::placeholder {
-            text-align: center;
-            color: rgb(0, 0, 0);
-            font-weight: bold;
-        }
-    </style>
 
     <aside>
         <!-- Hier könnten zusätzliche Informationen oder Widgets stehen -->
