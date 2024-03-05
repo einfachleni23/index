@@ -13,14 +13,14 @@
         <h1>Willkommen im Support!</h1>
     </header>
 
-       <nav>
+    <nav>
         <!-- Hier könnten Navigationslinks stehen -->
-		<a class="button" href="index.html">Home</a>
+        <a class="button" href="index.html">Home</a>
         <button class="button" id="loginButton">Anmelden</button>
         <div id="loginHint" class="hidden">
             <p>Hinweis: Nur für unseren ADMIN!</p>
         </div>
-        
+
         <button class="button" id="aboutButton">Über uns</button>
         <div id="aboutHint" class="hidden">
             <p>Willkommen auf unserer Website! Wir sind ein tolles Team! Schau: <a href="ueberuns.html">weitere Informationen</a></p>
@@ -28,100 +28,80 @@
 
         <button class="button" id="contactButton">Kontakt</button>
         <div id="contactHint" class="hidden">
-            <p>Wir freuen uns über deine Kontaktaufnahme! Schaue:  <a href="support.html">weitere Informatioenen</a></p>
+            <p>Wir freuen uns über deine Kontaktaufnahme! Schaue:  <a href="support.html">weitere Informationen</a></p>
         </div>
     </nav>
-	<form action="https://formspree.io/f/mayrbwgn" method="POST">
 
-        <div class="h2-1">
+    <main>
+        <form action="https://formspree.io/f/mayrbwgn" method="POST">
+            <div class="h2-1">
+                <h2>Kontaktiere hier meinen Manager, wenn es Fragen oder Probleme gibt:</h2>
 
-            <h2>Kontaktiere hier meinen Manager, wenn es Fragen oder Probleme gibt:</h2>
-                
-            <input type="text" class="inputs" name="first" placeholder="Vorname / First Name">
-            <br>
-            <br>
-            <input type="text" class="inputs" name="last" placeholder="Nachname / Last Name">
-            <br>
-            <br>
-            <input type="email" class="inputs" name="email" placeholder="Email Adresse / Email Adress">
-            <br>
-            <br>
-            <textarea required autocomplete="off" name="message" id="" cols="60" rows="5" placeholder="Hier Nachricht eingeben / Type Message here"></textarea>
-        
-            <br>
-            <br>
-            <br>
-        
-            <button class="btn-contact">Senden / Send</button>
-        
+                <input type="text" class="inputs" name="first" placeholder="Vorname / First Name">
+                <br>
+                <br>
+                <input type="text" class="inputs" name="last" placeholder="Nachname / Last Name">
+                <br>
+                <br>
+                <input type="email" class="inputs" name="email" placeholder="Email Adresse / Email Adress">
+                <br>
+                <br>
+                <textarea required autocomplete="off" name="message" id="" cols="60" rows="5" placeholder="Hier Nachricht eingeben / Type Message here"></textarea>
+
+                <br>
+                <br>
+                <br>
+
+                <button class="btn-contact">Senden / Send</button>
             </div>
-<style>
-            * {
-                font-family: Arial, Helvetica, sans-serif;
-                background-color: #333;
-            }
-    
-            .h2-1 {
-                text-align: center;
-            }
-    
-            h2 {
-                color: white;
-            }
-    
-            .img1 {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-            }
-    
-            .img-center {
-                text-align: center;
-            }
-    
-            .btn-contact {
-                background-color: #48de7a;
-                width: 200px;
-                height: 35px;
-                border-radius: 16px;
-                cursor: pointer;
-                border: none;
-            }
-    
-            .inputs {
-                background-color: white;
-                border-radius: 20px;
-                width: 250px;
-                height: 20px;
-                text-align: center;
-                border: 2px solid black;
-            }
-    
-            .inputs::placeholder {
-                text-align: center;
-                color: rgb(0, 0, 0);
-                font-weight: bold;
-            }
-    
-            textarea {
-                background-color: white;
-                border-radius: 12px;
-                border: 2px solid black;
-                text-align: center;
-            }
-    
-            textarea::placeholder {
-                text-align: center;
-                color: rgb(0, 0, 0);
-                font-weight: bold;
-            }
-    
-            button:hover {
-                opacity: 90%;
-            }
-        </style>    
-    </form>
-        <aside>
+        </form>
+    </main>
+
+    <style>
+        .inputs, textarea {
+            margin-bottom: 20px; /* Platz zwischen den Eingabefeldern erhöhen */
+        }
+
+        .img-center {
+            text-align: center;
+        }
+
+        .btn-contact {
+            background-color: #48de7a;
+            width: 200px;
+            height: 35px;
+            border-radius: 16px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            transition: opacity 0.3s ease; /* Hinzugefügte Übergangseffekte */
+        }
+
+        .btn-contact:hover {
+            opacity: 0.9;
+        }
+
+        .inputs, textarea {
+            background-color: white;
+            border-radius: 20px;
+            width: 300px; /* Breite der Eingabefelder erhöhen */
+            height: 40px; /* Höhe der Eingabefelder erhöhen */
+            text-align: center;
+            border: 2px solid black;
+            padding: 5px; /* Innenabstand der Eingabefelder hinzufügen */
+            box-sizing: border-box; /* Box-Modell anpassen */
+            font-size: 16px; /* Schriftgröße erhöhen */
+            margin-top: 10px; /* Abstand zum vorherigen Element erhöhen */
+        }
+
+        .inputs::placeholder, textarea::placeholder {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+    </style>
+
+    <aside>
         <!-- Hier könnten zusätzliche Informationen oder Widgets stehen -->
     </aside>
 
