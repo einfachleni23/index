@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Leni - Startseite</title>
+    <title>Admin-Bereich</title>
 </head>
+
 <body>
     <header>
-        <h1>Willkommen im Forum von Leni</h1>
+        <h1>Admin-Bereich</h1>
     </header>
 
-   <nav>
+    <nav>
         <!-- Hier könnten Navigationslinks stehen -->
-		<a class="button" href="index.html">Home</a>
+        <a class="button" href="index.html">Home</a>
         <button class="button" id="loginButton">Anmelden</button>
         <div id="loginHint" class="hidden">
-            <p>Hinweis: Nur für unseren ADMIN!</p>
+            <p>Hinweis: Melde dich an, um Beiträge zu schreiben und zu kommentieren.</p>
         </div>
-        
+
         <button class="button" id="aboutButton">Über uns</button>
         <div id="aboutHint" class="hidden">
-            <p>Willkommen auf unserer Website! Wir sind ein tolles Team! Schau: <a href="ueberuns.html">weitere Informationen</a></p>
+            <p>Willkommen auf unserer Website! Wir sind ein tolles Team, das sich leidenschaftlich für coole Dinge interessiert...</p>
         </div>
 
         <button class="button" id="contactButton">Kontakt</button>
         <div id="contactHint" class="hidden">
-            <p>Wir freuen uns über deine Kontaktaufnahme! Schaue:  <a href="support.html">weitere Informationen</a></p>
+            <p>Wir freuen uns über deine Kontaktaufnahme!</p>
         </div>
     </nav>
 
-    <section id="forum">
-        <article class="forum-post">
-            <h2>Willkommen</h2>
-            <p>Autor: ADMIN</p>
-            <p>Datum: 04.03.2024</p>
-            <p>Hello World! - xD - Schön, dass ich dich hier begrüßen darf! Es freut mich sehr das du uns gefunden hast. LG Leni</p>
-        </article>
-   
+    <section id="admin-content">
+        <h2>Zufällige IP-Adressen</h2>
+        <ul id="ipList"></ul>
     </section>
 
-    <aside>
-        <!-- Hier könnten zusätzliche Informationen oder Widgets stehen -->
-    </aside>
-
     <footer>
-        <p>&copy; 2024 einfachleni23 / einfach.leni</p>
+        <p>&copy; 2024 Coole Website</p>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // JavaScript-Code zum Generieren von zufälligen IP-Adressen
+        function generateRandomIp() {
+            var ip = '';
+            for (var i = 0; i < 4; i++) {
+                ip += Math.floor(Math.random() * 256);
+                if (i < 3) ip += '.';
+            }
+            return ip;
+        }
+
+        // JavaScript-Code zum Füllen der Liste mit zufälligen IP-Adressen
+        var ipList = document.getElementById('ipList');
+        for (var i = 0; i < 5; i++) {
+            var li = document.createElement('li');
+            li.textContent = generateRandomIp();
+            ipList.appendChild(li);
+        }
+    </script>
 </body>
+
 </html>
