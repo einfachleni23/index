@@ -18,7 +18,7 @@
 
         header, nav, main, aside, footer {
             width: 100%;
-            max-width: 800px; /* Ändere die Breite nach Bedarf */
+            max-width: 800px;
         }
 
         header, nav, footer {
@@ -30,7 +30,7 @@
 
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between; /* Geändet auf space-between */
             align-items: center;
         }
 
@@ -102,20 +102,24 @@
     </header>
 
     <nav>
-        <a class="button" href="index.html">Home</a>
-        <button class="button" id="loginButton">Anmelden</button>
-        <div id="loginHint" class="hidden">
-            <p>Hinweis: Nur für unseren ADMIN!</p>
+        <div>
+            <a class="button" href="index.html">Home</a>
+            <button class="button" id="loginButton">Anmelden</button>
+            <div id="loginHint" class="hidden">
+                <p>Hinweis: Nur für unseren ADMIN!</p>
+            </div>
         </div>
 
-        <button class="button" id="aboutButton">Über uns</button>
-        <div id="aboutHint" class="hidden">
-            <p>Willkommen auf unserer Website! Wir sind ein tolles Team! Schau: <a href="ueberuns.html">weitere Informationen</a></p>
-        </div>
+        <div>
+            <button class="button" id="aboutButton">Über uns</button>
+            <div id="aboutHint" class="hidden">
+                <p>Willkommen auf unserer Website! Wir sind ein tolles Team! Schau: <a href="ueberuns.html">weitere Informationen</a></p>
+            </div>
 
-        <button class="button" id="contactButton">Kontakt</button>
-        <div id="contactHint" class="hidden">
-            <p>Wir freuen uns über deine Kontaktaufnahme! Schaue:  <a href="support.html">weitere Informationen</a></p>
+            <button class="button" id="contactButton">Kontakt</button>
+            <div id="contactHint" class="hidden">
+                <p>Wir freuen uns über deine Kontaktaufnahme! Schaue:  <a href="support.html">weitere Informationen</a></p>
+            </div>
         </div>
     </nav>
 
@@ -126,13 +130,19 @@
 
                 <input type="text" class="inputs" name="first" placeholder="Vorname">
                 <br>
+                <br>
                 <input type="text" class="inputs" name="last" placeholder="Nachname">
                 <br>
+                <br>
                 <input type="email" class="inputs" name="email" placeholder="Email Adresse">
+                <br>
                 <br>
                 <textarea required autocomplete="off" name="message" id="" cols="60" rows="5" placeholder="Hier Nachricht eingeben"></textarea>
 
                 <br>
+                <br>
+                <br>
+
                 <button class="btn-contact">Senden / Send</button>
             </div>
         </form>
