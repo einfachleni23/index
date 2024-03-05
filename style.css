@@ -127,16 +127,3 @@ textarea {
 .btn-contact:hover {
     background-color: #45a049;
 }
-
-
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(51, 51, 51, 0.8); /* Adjusted background color with alpha transparency */
-            color: white;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            z-index: 1000;
-            backdrop-filter: blur(15px); /* Increased blur sensitivity */
-        }
