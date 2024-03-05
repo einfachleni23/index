@@ -30,7 +30,7 @@
 
         nav {
             display: flex;
-            justify-content: space-between; /* Geändet auf space-between */
+            justify-content: space-between;
             align-items: center;
         }
 
@@ -103,14 +103,6 @@
 
     <nav>
         <div>
-            <a class="button" href="index.html">Home</a>
-            <button class="button" id="loginButton">Anmelden</button>
-            <div id="loginHint" class="hidden">
-                <p>Hinweis: Nur für unseren ADMIN!</p>
-            </div>
-        </div>
-
-        <div>
             <button class="button" id="aboutButton">Über uns</button>
             <div id="aboutHint" class="hidden">
                 <p>Willkommen auf unserer Website! Wir sind ein tolles Team! Schau: <a href="ueberuns.html">weitere Informationen</a></p>
@@ -119,6 +111,14 @@
             <button class="button" id="contactButton">Kontakt</button>
             <div id="contactHint" class="hidden">
                 <p>Wir freuen uns über deine Kontaktaufnahme! Schaue:  <a href="support.html">weitere Informationen</a></p>
+            </div>
+        </div>
+
+        <div>
+            <a class="button" href="index.html">Home</a>
+            <button class="button" id="loginButton">Anmelden</button>
+            <div id="loginHint" class="hidden">
+                <p>Hinweis: Nur für unseren ADMIN!</p>
             </div>
         </div>
     </nav>
@@ -140,9 +140,6 @@
                 <textarea required autocomplete="off" name="message" id="" cols="60" rows="5" placeholder="Hier Nachricht eingeben"></textarea>
 
                 <br>
-                <br>
-                <br>
-
                 <button class="btn-contact">Senden / Send</button>
             </div>
         </form>
