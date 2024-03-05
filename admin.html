@@ -33,7 +33,7 @@
     </nav>
 
     <section id="admin-content">
-        <h2>Zufällige IP-Adressen</h2>
+        <h2>Zufällige IP-Adressen und Uhrzeiten</h2>
         <ul id="ipList"></ul>
     </section>
 
@@ -53,11 +53,18 @@
             return ip;
         }
 
-        // JavaScript-Code zum Füllen der Liste mit zufälligen IP-Adressen
+        // JavaScript-Code zum Generieren von zufälligen Uhrzeiten
+        function generateRandomTime() {
+            var hours = Math.floor(Math.random() * 24);
+            var minutes = Math.floor(Math.random() * 60);
+            return `${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+        }
+
+        // JavaScript-Code zum Füllen der Liste mit zufälligen IP-Adressen und Uhrzeiten
         var ipList = document.getElementById('ipList');
         for (var i = 0; i < 5; i++) {
             var li = document.createElement('li');
-            li.textContent = generateRandomIp();
+            li.textContent = `IP: ${generateRandomIp()} - Uhrzeit: ${generateRandomTime()}`;
             ipList.appendChild(li);
         }
     </script>
