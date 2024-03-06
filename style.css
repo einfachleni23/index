@@ -165,3 +165,8 @@ textarea {
         font-size: 14px;
     }
 }
+        a {
+            text-decoration: none; /* Entferne Unterstreichung */
+            color: inherit; /* Übernehme die Farbe des umgebenden Texts */
+            cursor: default; /* Ändere den Cursor, um anzuzeigen, dass es kein anklickbarer Link ist */
+        }
