@@ -14,10 +14,26 @@
    <nav>
         <!-- Hier könnten Navigationslinks stehen -->
 		<a class="button" href="index.html">Home</a>
-        <button class="button" id="loginButton">Anmelden</button>
-        <div id="loginHint" class="hidden">
-            <p>Hinweis: Nur für unseren ADMIN!</p>
-        </div>
+        <button class="button" id="loginButton" onclick="login()">Anmelden</button>
+<div id="loginHint" class="hidden">
+    <p>Hinweis: Nur für unseren ADMIN!</p>
+</div>
+
+<script>
+    function login() {
+        var nickname = prompt('Bitte Nickname eingeben:');
+        var password = prompt('Bitte Passwort eingeben:');
+
+        // Überprüfe, ob der Nickname 'admin' ist und das Passwort 'Bruchw3d3l'
+        if (nickname && password && nickname.toLowerCase() === 'admin' && password === 'Bruchw3d3l') {
+            // Erfolgreiche Anmeldung, weiterleiten zur admin.html-Seite
+            window.location.href = 'admin.html';
+        } else {
+            // Fehlermeldung oder andere Aktion bei ungültigen Anmeldeinformationen
+            alert('Ungültige Anmeldeinformationen. Stelle sicher, dass der Nickname "admin" und das Passwort "Bruchw3d3l" sind.');
+        }
+    }
+</script>
         
         <button class="button" id="aboutButton">Über uns</button>
         <div id="aboutHint" class="hidden">
