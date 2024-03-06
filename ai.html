@@ -29,3 +29,36 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung</title>
+</head>
+<body>
+
+<form id="loginForm">
+    Nickname: <input type="text" id="nickname" name="nickname"><br>
+    Passwort: <input type="password" id="password" name="password"><br>
+    <input type="button" value="Anmelden" onclick="login()">
+</form>
+
+<script>
+    function login() {
+        var nickname = document.getElementById('nickname').value;
+        var password = document.getElementById('password').value;
+
+        // Überprüfe, ob der Nickname 'admin' ist und das Passwort 'Bruchw3d3l'
+        if (nickname.toLowerCase() === 'admin' && password === 'Bruchw3d3l') {
+            // Erfolgreiche Anmeldung, weiterleiten zur admin.html-Seite
+            window.location.href = 'admin.html';
+        } else {
+            // Fehlermeldung oder andere Aktion bei ungültigen Anmeldeinformationen
+            alert('Ungültige Anmeldeinformationen. Hier kann sich nur der Admin anmelden.Anmeldeinformationen');
+        }
+    }
+</script>
+
+</body>
+</html>
