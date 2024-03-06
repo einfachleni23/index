@@ -1,27 +1,43 @@
+</html>
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Leni - Startseite</title>
 </head>
-
 <body>
-    <h1>Datenschutzerklärung</h1>
+    <header>
+        <h1>Willkommen im Forum von Leni</h1>
+    </header>
+
+   <nav>
+        <!-- Hier könnten Navigationslinks stehen -->
+		<a class="button" href="index.html">Home</a>
+        <a class="button" id="loginButton" onclick="login()">Anmelden</a>
+
+<script>
+    function login() {
+        var nickname = prompt('Bitte Nickname eingeben:');
+        var password = prompt('Bitte Passwort eingeben:');
+
+        // Überprüfe, ob der Nickname 'admin' ist und das Passwort 'Bruchw3d3l'
+        if (nickname && password && nickname.toLowerCase() === 'admin' && password === 'Bruchw3d3l') {
+            // Erfolgreiche Anmeldung, weiterleiten zur admin.html-Seite
+            window.location.href = 'admin.html';
+        } else {
+            // Fehlermeldung oder andere Aktion bei ungültigen Anmeldeinformationen
+            alert('Ungültige Anmeldeinformationen. Stelle sicher, dass der Nickname und das Passwort richtig sind.');
+        }
+    }
+</script>
+        <a class="button" href="ueberuns.html">Über uns</a>
+       <a class="button" href="support.html">Kontakt</a>
+    </nav>
+
+    <section>
+         <h1>Datenschutzerklärung</h1>
 
     <p>Stand: [Aktualisierungsdatum]</p>
 
@@ -40,6 +56,17 @@
     <p>Unseren Datenschutzbeauftragten erreichst du unter [Kontaktinformationen des Datenschutzbeauftragten].</p>
 
     <p>Quelle: Muster-Datenschutzerklärung von <a href="https://www.e-recht24.de/muster-datenschutzerklaerung.html" target="_blank">e-recht24.de</a></p>
-</body>
+ 
+    </section>
 
+    <aside>
+        <!-- Hier könnten zusätzliche Informationen oder Widgets stehen -->
+    </aside>
+
+    <footer>
+        <p> <a href="lenis-impressum.html">Impressum</a> | &copy; 2024 einfachleni23 / einfach.leni | <a href="datenschutz.html">Datenschutz</a> </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
