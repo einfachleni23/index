@@ -30,26 +30,18 @@
 </head>
 <body>
 
-<button class="button" id="loginButton" onclick="login()">Anmelden</button>
-<div id="loginHint" class="hidden">
-    <p>Hinweis: Nur für unseren ADMIN!</p>
-</div>
+<button class="button" id="logoutButton" onclick="logout()">Abmelden</button>
 
 <script>
-    function login() {
-        var nickname = prompt('Bitte Nickname eingeben:');
-        var password = prompt('Bitte Passwort eingeben:');
+    function logout() {
+        // Hier könntest du zusätzliche Aktionen vor dem Abmelden durchführen, wenn nötig
+        // Zum Beispiel: Speichere Sitzungsdaten, räume Ressourcen auf, etc.
 
-        // Überprüfe, ob der Nickname 'admin' ist und das Passwort 'Bruchw3d3l'
-        if (nickname && password && nickname.toLowerCase() === 'admin' && password === 'Bruchw3d3l') {
-            // Erfolgreiche Anmeldung, weiterleiten zur admin.html-Seite
-            window.location.href = 'admin.html';
-        } else {
-            // Fehlermeldung oder andere Aktion bei ungültigen Anmeldeinformationen
-            alert('Ungültige Anmeldeinformationen. Stelle sicher, dass der Nickname "admin" und das Passwort "Bruchw3d3l" sind.');
-        }
+        // Leite den Benutzer zur Anmeldeseite weiter (ersetze 'index.html' durch deine Anmeldeseite)
+        window.location.href = 'index.html';
     }
 </script>
+
         <button class="button" id="aboutButton">Über uns</button>
         <div id="aboutHint" class="hidden">
             <p>Willkommen auf unserer Website! Wir sind ein tolles Team! Schau: <a href="ueberuns.html">weitere Informationen</a></p>
@@ -111,5 +103,3 @@
         }
     </script>
 </body>
-
-</html>
