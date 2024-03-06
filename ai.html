@@ -3,50 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Embed</title>
+    <title>Anmeldung</title>
 </head>
 <body>
-    <div id="chat-container">
-        <!-- Hier wird der Chat angezeigt -->
-    </div>
 
-    <script>
-        // Ersetze 'DEIN_API_SCHLÜSSEL_HIER' durch deinen tatsächlichen API-Schlüssel
-        const apiKey = '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';
-        const chatContainer = document.getElementById('chat-container');
+<form id="loginForm">
+    Nickname: <input type="text" id="nickname" name="nickname"><br>
+    <input type="button" value="Anmelden" onclick="login()">
+</form>
 
-        async function getChatResponse(message) {
-            const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${apiKey}`,
-                },
-                body: JSON.stringify({
-                    prompt: message,
-                    max_tokens: 150,
-                }),
-            });
+<script>
+    function login() {
+        var nickname = document.getElementById('nickname').value;
 
-            const data = await response.json();
-            return data.choices[0].text.trim();
+        // Überprüfe, ob der Nickname 'admin' ist
+        if (nickname.toLowerCase() === 'admin') {
+            // Erfolgreiche Anmeldung, weiterleiten zur admin.html-Seite
+            window.location.href = 'admin.html';
+        } else {
+            // Fehlermeldung oder andere Aktion bei ungültigem Nickname
+            alert('Ungültiger Nickname. Nur "admin" ist erlaubt.');
         }
+    }
+</script>
 
-        // Beispiel: Eine Funktion, um eine Nachricht zu senden und die Antwort anzuzeigen
-        async function sendMessage(message) {
-            // Hier kannst du die Nutzereingabe verarbeiten oder direkt an die API senden
-            const userMessage = message;
-
-            // API-Antwort abrufen
-            const aiResponse = await getChatResponse(userMessage);
-
-            // Antwort in das Chat-Container einfügen
-            chatContainer.innerHTML += `<p><strong>Nutzer:</strong> ${userMessage}</p>`;
-            chatContainer.innerHTML += `<p><strong>AI:</strong> ${aiResponse}</p>`;
-        }
-
-        // Beispiel: Eine initiale Nachricht senden
-        sendMessage('Hallo, wie kann ich Ihnen helfen?');
-    </script>
 </body>
 </html>
