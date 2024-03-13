@@ -9,35 +9,17 @@
 </head>
 
 <body>
-	<header2>
-		<img src="logo.png" HEIGHT="64" WIDTH="64">
-	</header2>
     <header>
+        <img src="logo.png" height="64" width="64">
         <h1>Willkommen im Forum von Leni</h1>
     </header>
 
-  <nav>
+    <nav>
         <!-- Hier könnten Navigationslinks stehen -->
-		<a class="button" href="index.html">Home</a>
+        <a class="button" href="index.html">Home</a>
         <a class="button" id="loginButton" onclick="login()">Anmelden</a>
-
-<script>
-    function login() {
-        var nickname = prompt('Bitte Nickname eingeben:');
-        var password = prompt('Bitte Passwort eingeben:');
-
-        // Überprüfe, ob der Nickname 'admin' ist und das Passwort 'Bruchw3d3l'
-        if (nickname && password && nickname.toLowerCase() === 'admin' && password === 'Bruchw3d3l') {
-            // Erfolgreiche Anmeldung, weiterleiten zur admin.html-Seite
-            window.location.href = 'admin.html';
-        } else {
-            // Fehlermeldung oder andere Aktion bei ungültigen Anmeldeinformationen
-            alert('Ungültige Anmeldeinformationen. Stelle sicher, dass der Nickname und das Passwort richtig sind.');
-        }
-    }
-</script>
         <a class="button" href="ueberuns.html">Über uns</a>
-       <a class="button" href="support.html">Kontakt</a>
+        <a class="button" href="support.html">Kontakt</a>
     </nav>
 
     <section id="forum">
@@ -45,9 +27,9 @@
             <h2>Willkommen</h2>
             <p>Autor: ADMIN</p>
             <p>Datum: 04.03.2024</p>
-            <p>Hello World! - xD - Schön, dass ich dich hier begrüßen darf! Es freut mich sehr das du uns gefunden hast. LG Leni</p>
+            <p>Hello World! - xD - Schön, dass ich dich hier begrüßen darf! Es freut mich sehr, dass du uns gefunden hast. LG Leni</p>
         </article>
-  <article class="forum-post">
+        <article class="forum-post">
             <h2>Danke.</h2>
             <p>Autor: einfach.leni</p>
             <p>Datum: 04.03.2024</p>
@@ -59,7 +41,7 @@
     <aside>
         <!-- Hier könnten zusätzliche Informationen oder Widgets stehen -->
     </aside>
-    
+
     <footer>
         <p><a href="lenis-impressum.html">Impressum</a> | &copy; 2024 einfachleni23 / einfach.leni | <a href="datenschutz.html">Datenschutz</a></p>
     </footer>
