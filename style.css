@@ -175,3 +175,11 @@ textarea {
             color: inherit; /* Übernehme die Farbe des umgebenden Texts */
             cursor: default; /* Ändere den Cursor, um anzuzeigen, dass es kein anklickbarer Link ist */
         }
+header {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-right: 10px; /* Optional: Abstand zum Text im Header */
+}
