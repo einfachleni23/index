@@ -2,7 +2,7 @@ const generateForm = document.querySelector(".generate-form");
 const generateBtn = generateForm.querySelector(".generate-btn");
 const imageGallery = document.querySelector(".image-gallery");
 
-const OPENAI_API_KEY = "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"; // Your OpenAI API key here
+const OPENAI_API_KEY = "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"; // Your OpenAI API key here
 let isImageGenerating = false;
 
 const updateImageCard = (imgDataArray) => {
