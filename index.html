@@ -49,6 +49,23 @@
     </footer>
 
     <script src="script.js"></script>
+<div id="cookie-banner">
+    <p>Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung unserer Website stimmen Sie unserer <a href="#">Cookie-Richtlinie</a> zu.</p>
+    <button onclick="hideCookieBanner()">Verstanden</button>
+</div>
+
+<script>
+    // Überprüfen, ob der Cookie-Hinweis bereits angezeigt wurde
+    if (localStorage.getItem('cookieBannerDisplayed') === null) {
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    // Funktion zum Ausblenden des Cookie-Hinweises und Speichern der Zustimmung im localStorage
+    function hideCookieBanner() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        localStorage.setItem('cookieBannerDisplayed', 'true');
+    }
+</script>
 </body>
 
 </html>
